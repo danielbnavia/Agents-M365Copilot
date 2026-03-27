@@ -1,0 +1,364 @@
+.dashboard-shell {
+  display: grid;
+  gap: 1.5rem;
+  width: min(1280px, calc(100vw - 3rem));
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+.hero-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 1fr);
+  gap: 1.5rem;
+}
+
+.hero-panel h1,
+.panel h2 {
+  margin: 0;
+  color: #f8fbff;
+}
+
+.hero-panel h1 {
+  font-size: clamp(2.4rem, 4vw, 4.5rem);
+  line-height: 1.04;
+  max-width: 12ch;
+}
+
+.hero-panel > div,
+.hero-card,
+.metric-card,
+.panel {
+  background: rgba(10, 17, 31, 0.78);
+  border: 1px solid rgba(137, 153, 196, 0.16);
+  box-shadow: 0 20px 50px rgba(2, 6, 23, 0.32);
+  backdrop-filter: blur(14px);
+}
+
+.hero-panel > div:first-child,
+.hero-card,
+.panel {
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+}
+
+.eyebrow,
+.panel__eyebrow,
+.metric-card__label,
+.hero-card__label {
+  display: inline-flex;
+  align-self: flex-start;
+  margin: 0 0 0.9rem;
+  color: #cfd8ff;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.eyebrow,
+.panel__eyebrow,
+.hero-card__label {
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(122, 92, 255, 0.16);
+  border: 1px solid rgba(150, 125, 255, 0.22);
+}
+
+.hero-copy {
+  margin-top: 1rem;
+  max-width: 58ch;
+  color: #aeb9d8;
+  font-size: 1.03rem;
+}
+
+.hero-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.hero-card strong {
+  font-size: 1.65rem;
+  color: #f8fbff;
+}
+
+.hero-card p,
+.panel p,
+.feed-item__row span,
+.health-table__row,
+.health-table__header {
+  color: #9eaccf;
+}
+
+.hero-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.92rem;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.metric-card {
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.metric-card strong {
+  color: #f8fbff;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.metric-card__label {
+  margin-bottom: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: #96a6ce;
+}
+
+.metric-card__delta {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 0.38rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.metric-card__delta--up {
+  background: rgba(80, 214, 148, 0.14);
+  color: #80efbe;
+}
+
+.metric-card__delta--down {
+  background: rgba(255, 188, 92, 0.14);
+  color: #ffd080;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(300px, 1fr);
+  gap: 1.5rem;
+}
+
+.panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.panel__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.panel__action {
+  appearance: none;
+  border: 1px solid rgba(151, 170, 218, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+  color: #eef2ff;
+  border-radius: 999px;
+  padding: 0.72rem 1rem;
+  cursor: pointer;
+}
+
+.feed-list,
+.checklist,
+.usage-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.feed-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.85rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(138, 153, 194, 0.12);
+}
+
+.feed-item__tone {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  margin-top: 0.4rem;
+}
+
+.feed-item__tone--good {
+  background: #4cd995;
+  box-shadow: 0 0 0 5px rgba(76, 217, 149, 0.14);
+}
+
+.feed-item__tone--watch {
+  background: #ffbf5e;
+  box-shadow: 0 0 0 5px rgba(255, 191, 94, 0.14);
+}
+
+.feed-item__tone--risk {
+  background: #ff7f7f;
+  box-shadow: 0 0 0 5px rgba(255, 127, 127, 0.14);
+}
+
+.feed-item__body {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.feed-item__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.feed-item__row strong,
+.checklist li,
+.health-table__row span:first-child,
+.usage-row__labels span:first-child {
+  color: #f4f7ff;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.checklist li {
+  position: relative;
+  padding: 0.05rem 0 0.05rem 1.8rem;
+}
+
+.checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45rem;
+  width: 0.95rem;
+  height: 0.95rem;
+  border-radius: 0.3rem;
+  background: linear-gradient(135deg, #62d0ff 0%, #8f6fff 100%);
+  box-shadow: 0 0 0 5px rgba(109, 139, 255, 0.14);
+}
+
+.health-table {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.health-table__header,
+.health-table__row {
+  display: grid;
+  grid-template-columns: minmax(180px, 1.5fr) 0.9fr 0.7fr 0.7fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.health-table__header {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.health-table__row {
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(138, 153, 194, 0.12);
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+  padding: 0.36rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.status-pill--healthy {
+  background: rgba(80, 214, 148, 0.14);
+  color: #80efbe;
+}
+
+.status-pill--syncing {
+  background: rgba(103, 182, 255, 0.14);
+  color: #8dd2ff;
+}
+
+.status-pill--degraded {
+  background: rgba(255, 188, 92, 0.14);
+  color: #ffd080;
+}
+
+.usage-row {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.usage-row__labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #a3b0d1;
+}
+
+.usage-row__bar {
+  height: 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.usage-row__bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #5ed0ff 0%, #7d8cff 50%, #a56cff 100%);
+}
+
+@media (max-width: 1100px) {
+  .metrics-grid,
+  .content-grid,
+  .hero-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 820px) {
+  .dashboard-shell {
+    width: min(100vw - 1.5rem, 1280px);
+    padding-top: 1rem;
+  }
+
+  .panel__header,
+  .health-table__header,
+  .health-table__row {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .feed-item__row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
