@@ -17,7 +17,7 @@ describe("AgentsM365CopilotAzureIdentityAuthenticationProvider tests", () => {
     assert.instanceOf(
       provider,
       AzureIdentityAuthenticationProvider,
-      "Provider does not implement AzureIdentityAuthenticationProvider",
+      "Provider is not an instance of AzureIdentityAuthenticationProvider",
     );
   });
 

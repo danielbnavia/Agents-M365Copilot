@@ -5,6 +5,7 @@ on:
   push:
     branches: ["main"]
     paths:
+      - ".github/workflows/**"
       - "dotnet/**"
       - "python/**"
       - "typescript/**"
@@ -17,6 +18,7 @@ on:
   pull_request:
     branches: ["main"]
     paths:
+      - ".github/workflows/**"
       - "dotnet/**"
       - "python/**"
       - "typescript/**"
