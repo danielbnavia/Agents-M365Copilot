@@ -138,8 +138,8 @@ function App() {
           <p className="panel__eyebrow">Rollout checklist</p>
           <h2>Next actions</h2>
           <ul className="checklist">
-            {rolloutMilestones.map((item) => (
-              <li key={item}>{item}</li>
+            {rolloutMilestones.map((item, index) => (
+              <li key={index}>{item}</li>
             ))}
           </ul>
         </article>
