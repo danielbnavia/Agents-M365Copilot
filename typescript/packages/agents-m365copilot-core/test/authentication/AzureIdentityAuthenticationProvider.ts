@@ -11,13 +11,13 @@ const options: AgentsM365CopilotTelemetryOption = {
 };
 
 describe("AgentsM365CopilotAzureIdentityAuthenticationProvider tests", () => {
-  it("should implement AzureIdentityAccessTokenProvider", () => {
+  it("should implement AzureIdentityAuthenticationProvider", () => {
     const credential = {} as TokenCredential; // Replace with actual TokenCredential implementation
     const provider = new AgentsM365CopilotAzureIdentityAuthenticationProvider(credential);
     assert.instanceOf(
       provider,
       AzureIdentityAuthenticationProvider,
-      "Provider does not implement AzureIdentityAccessTokenProvider",
+      "Provider does not implement AzureIdentityAuthenticationProvider",
     );
   });
 
