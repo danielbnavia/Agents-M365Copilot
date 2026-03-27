@@ -1,0 +1,176 @@
+.page {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.header {
+	margin-bottom: 4px;
+}
+
+.title {
+	font-size: 28px;
+	font-weight: 700;
+	color: var(--color-text-primary);
+	margin-bottom: 4px;
+}
+
+.subtitle {
+	font-size: 15px;
+	color: var(--color-text-secondary);
+}
+
+.langTabs {
+	display: flex;
+	gap: 4px;
+	background: var(--color-bg-surface);
+	border: 1px solid var(--color-border);
+	padding: 4px;
+	border-radius: var(--radius-md);
+	width: fit-content;
+}
+
+.langTab {
+	padding: 8px 20px;
+	border-radius: var(--radius-sm);
+	font-size: 13px;
+	font-weight: 500;
+	color: var(--color-text-secondary);
+	transition: all 0.15s ease;
+}
+
+.langTab:hover {
+	color: var(--color-text-primary);
+}
+
+.langTabActive {
+	color: var(--color-text-primary) !important;
+	background: var(--color-bg-elevated) !important;
+}
+
+.steps {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.prereqList {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.prereqList li {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	font-size: 14px;
+	color: var(--color-text-secondary);
+	line-height: 1.5;
+}
+
+.prereqList li::before {
+	content: "→";
+	color: var(--color-accent);
+	flex-shrink: 0;
+	font-weight: 600;
+}
+
+.codeBlock {
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-md);
+	overflow: hidden;
+}
+
+.codeHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 8px 14px;
+	background: var(--color-bg-elevated);
+	border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.codeLang {
+	font-size: 12px;
+	font-weight: 500;
+	color: var(--color-text-muted);
+	text-transform: lowercase;
+}
+
+.copyBtn {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	font-size: 12px;
+	color: var(--color-text-muted);
+	padding: 4px 8px;
+	border-radius: 4px;
+	transition: all 0.15s ease;
+}
+
+.copyBtn:hover {
+	color: var(--color-text-primary);
+	background: var(--color-bg-hover);
+}
+
+.codeContent {
+	padding: 16px;
+	background: var(--color-bg);
+	overflow-x: auto;
+	margin: 0;
+}
+
+.codeContent code {
+	font-size: 13px;
+	line-height: 1.7;
+	color: var(--color-text-secondary);
+}
+
+.nextSteps {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.nextStepLink {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 16px;
+	border-radius: var(--radius-md);
+	border: 1px solid var(--color-border-subtle);
+	transition: all 0.15s ease;
+}
+
+.nextStepLink:hover {
+	background: var(--color-bg-hover);
+	border-color: var(--color-border);
+}
+
+.nextStepIcon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 42px;
+	height: 42px;
+	border-radius: var(--radius-md);
+	background: var(--color-accent-subtle);
+	color: var(--color-accent);
+	flex-shrink: 0;
+}
+
+.nextStepTitle {
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--color-text-primary);
+	margin-bottom: 2px;
+}
+
+.nextStepDesc {
+	display: block;
+	font-size: 13px;
+	color: var(--color-text-muted);
+}

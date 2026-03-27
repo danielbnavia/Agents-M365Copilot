@@ -1,0 +1,101 @@
+:root {
+	--color-bg: #0f1117;
+	--color-bg-surface: #161822;
+	--color-bg-elevated: #1c1f2e;
+	--color-bg-hover: #252840;
+	--color-border: #2a2d3e;
+	--color-border-subtle: #1e2130;
+
+	--color-text-primary: #e8eaf0;
+	--color-text-secondary: #8b8fa7;
+	--color-text-muted: #5c6078;
+
+	--color-accent: #4f6df5;
+	--color-accent-hover: #6380ff;
+	--color-accent-subtle: rgba(79, 109, 245, 0.12);
+
+	--color-success: #34d399;
+	--color-success-subtle: rgba(52, 211, 153, 0.12);
+	--color-warning: #fbbf24;
+	--color-warning-subtle: rgba(251, 191, 36, 0.12);
+	--color-error: #f87171;
+	--color-error-subtle: rgba(248, 113, 113, 0.12);
+	--color-info: #60a5fa;
+	--color-info-subtle: rgba(96, 165, 250, 0.12);
+
+	--color-typescript: #3178c6;
+	--color-dotnet: #512bd4;
+	--color-python: #3776ab;
+
+	--radius-sm: 6px;
+	--radius-md: 10px;
+	--radius-lg: 14px;
+	--radius-xl: 20px;
+
+	--shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+	--shadow-md: 0 4px 12px rgba(0, 0, 0, 0.25);
+	--shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.3);
+
+	--sidebar-width: 260px;
+	--header-height: 64px;
+
+	--font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	--font-mono: "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: var(--font-sans);
+	background: var(--color-bg);
+	color: var(--color-text-primary);
+	line-height: 1.6;
+	min-height: 100vh;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button {
+	font-family: inherit;
+	cursor: pointer;
+	border: none;
+	background: none;
+}
+
+code,
+pre {
+	font-family: var(--font-mono);
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--color-border);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--color-text-muted);
+}

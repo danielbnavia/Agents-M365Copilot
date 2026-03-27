@@ -1,0 +1,171 @@
+.page {
+	display: flex;
+	flex-direction: column;
+	gap: 28px;
+}
+
+.header {
+	margin-bottom: 4px;
+}
+
+.title {
+	font-size: 28px;
+	font-weight: 700;
+	color: var(--color-text-primary);
+	margin-bottom: 4px;
+}
+
+.subtitle {
+	font-size: 15px;
+	color: var(--color-text-secondary);
+}
+
+.statsGrid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 16px;
+}
+
+@media (max-width: 1024px) {
+	.statsGrid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 640px) {
+	.statsGrid {
+		grid-template-columns: 1fr;
+	}
+}
+
+.statCard {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.statLabel {
+	font-size: 13px;
+	font-weight: 500;
+	color: var(--color-text-muted);
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+.statValue {
+	font-size: 30px;
+	font-weight: 700;
+	color: var(--color-text-primary);
+	line-height: 1.1;
+}
+
+.statChange {
+	font-size: 12px;
+	color: var(--color-text-muted);
+	margin-top: 2px;
+}
+
+.trendUp {
+	color: var(--color-success);
+}
+
+.sectionGrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+@media (max-width: 900px) {
+	.sectionGrid {
+		grid-template-columns: 1fr;
+	}
+}
+
+.packageList {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.packageRow {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 12px;
+	border-radius: var(--radius-sm);
+	transition: background 0.1s ease;
+}
+
+.packageRow:hover {
+	background: var(--color-bg-hover);
+}
+
+.packageInfo {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.langDot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	flex-shrink: 0;
+}
+
+.packageName {
+	display: block;
+	font-size: 14px;
+	font-weight: 500;
+	color: var(--color-text-primary);
+}
+
+.packageMeta {
+	display: block;
+	font-size: 12px;
+	color: var(--color-text-muted);
+}
+
+.linkList {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.linkItem {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	padding: 12px;
+	border-radius: var(--radius-md);
+	transition: background 0.1s ease;
+}
+
+.linkItem:hover {
+	background: var(--color-bg-hover);
+}
+
+.linkIcon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: var(--radius-sm);
+	background: var(--color-bg-elevated);
+	color: var(--color-text-secondary);
+	flex-shrink: 0;
+}
+
+.linkTitle {
+	display: block;
+	font-size: 14px;
+	font-weight: 500;
+	color: var(--color-text-primary);
+}
+
+.linkDesc {
+	display: block;
+	font-size: 12px;
+	color: var(--color-text-muted);
+}

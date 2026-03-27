@@ -1,0 +1,148 @@
+.page {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.title {
+	font-size: 28px;
+	font-weight: 700;
+	color: var(--color-text-primary);
+	margin-bottom: 4px;
+}
+
+.subtitle {
+	font-size: 15px;
+	color: var(--color-text-secondary);
+}
+
+.filters {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.filterBtn {
+	padding: 7px 16px;
+	border-radius: var(--radius-md);
+	font-size: 13px;
+	font-weight: 500;
+	color: var(--color-text-secondary);
+	background: var(--color-bg-surface);
+	border: 1px solid var(--color-border);
+	transition: all 0.15s ease;
+}
+
+.filterBtn:hover {
+	color: var(--color-text-primary);
+	border-color: var(--color-bg-hover);
+}
+
+.filterActive {
+	color: var(--color-accent) !important;
+	background: var(--color-accent-subtle) !important;
+	border-color: var(--color-accent) !important;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+	gap: 16px;
+}
+
+@media (max-width: 640px) {
+	.grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+.pkgCard {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.pkgHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.pkgTitleRow {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.langIndicator {
+	width: 10px;
+	height: 10px;
+	border-radius: 3px;
+	flex-shrink: 0;
+}
+
+.pkgName {
+	font-size: 16px;
+	font-weight: 600;
+	color: var(--color-text-primary);
+}
+
+.pkgDescription {
+	font-size: 13px;
+	color: var(--color-text-secondary);
+	line-height: 1.6;
+}
+
+.pkgMeta {
+	display: flex;
+	gap: 8px;
+}
+
+.pkgIdentifier {
+	font-size: 12px;
+	padding: 4px 10px;
+	background: var(--color-bg-elevated);
+	border-radius: var(--radius-sm);
+	color: var(--color-text-muted);
+}
+
+.pkgFooter {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 14px;
+	border-top: 1px solid var(--color-border-subtle);
+}
+
+.pkgStats {
+	display: flex;
+	gap: 16px;
+}
+
+.pkgStat {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	font-size: 12px;
+	color: var(--color-text-muted);
+}
+
+.registryLink {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	font-size: 13px;
+	font-weight: 500;
+	color: var(--color-accent);
+	transition: color 0.1s ease;
+}
+
+.registryLink:hover {
+	color: var(--color-accent-hover);
+}
