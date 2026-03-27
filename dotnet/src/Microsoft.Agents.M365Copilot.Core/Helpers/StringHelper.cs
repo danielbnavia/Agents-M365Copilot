@@ -21,7 +21,9 @@ namespace Microsoft.Agents.M365Copilot.Core.Helpers
             if (!string.IsNullOrEmpty(typeString))
             {
                 var stringSegments = typeString.Split('.').Select(
-                    segment => string.Concat(segment.Substring(0, 1).ToUpperInvariant(), segment.Substring(1)));
+                    segment => segment.Length > 0
+                        ? string.Concat(segment.Substring(0, 1).ToUpperInvariant(), segment.Substring(1))
+                        : segment);
                 return string.Join(".", stringSegments);
             }
 
@@ -38,7 +40,9 @@ namespace Microsoft.Agents.M365Copilot.Core.Helpers
             if (!string.IsNullOrEmpty(typeString))
             {
                 var stringSegments = typeString.Split('.').Select(
-                    segment => string.Concat(segment.Substring(0, 1).ToLowerInvariant(), segment.Substring(1)));
+                    segment => segment.Length > 0
+                        ? string.Concat(segment.Substring(0, 1).ToLowerInvariant(), segment.Substring(1))
+                        : segment);
                 return string.Join(".", stringSegments);
             }
 
