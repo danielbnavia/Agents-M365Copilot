@@ -327,6 +327,7 @@
 
 .usage-row__bar span {
   display: block;
+  width: var(--usage-percent);
   height: 100%;
   border-radius: inherit;
   background: linear-gradient(90deg, #5ed0ff 0%, #7d8cff 50%, #a56cff 100%);
