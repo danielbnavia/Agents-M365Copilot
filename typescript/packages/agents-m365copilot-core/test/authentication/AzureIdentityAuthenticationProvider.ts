@@ -11,7 +11,7 @@ const options: AgentsM365CopilotTelemetryOption = {
 };
 
 describe("AgentsM365CopilotAzureIdentityAuthenticationProvider tests", () => {
-  it("should implement AzureIdentityAuthenticationProvider", () => {
+  it("should be an instance of AzureIdentityAuthenticationProvider", () => {
     const credential = {} as TokenCredential; // Replace with actual TokenCredential implementation
     const provider = new AgentsM365CopilotAzureIdentityAuthenticationProvider(credential);
     assert.instanceOf(
