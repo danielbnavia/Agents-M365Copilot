@@ -21,7 +21,9 @@ This is a multi-language SDK monorepo (TypeScript, Python, C#/.NET) for Microsof
 
 ### .NET (`dotnet/`)
 
-- `dotnet restore Microsoft.Agents.M365Copilot.sln` then `dotnet build Microsoft.Agents.M365Copilot.sln -c Debug`.
+- Build the solution (this also restores dependencies):
+  ```bash
+  dotnet build Microsoft.Agents.M365Copilot.sln -c Debug
 - `dotnet test Microsoft.Agents.M365Copilot.sln -c Debug` runs xUnit tests (71 tests across Core and Beta test projects).
 - NU1903 warnings about `Microsoft.Bcl.Memory` vulnerability are expected and non-blocking.
 
