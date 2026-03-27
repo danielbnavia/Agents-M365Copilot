@@ -15,7 +15,9 @@ This is a multi-language SDK monorepo (TypeScript, Python, C#/.NET) for Microsof
 - `npm ci` installs all workspace packages (Lerna monorepo with npm workspaces).
 - `npm run build` in `typescript/` runs prettier check then builds `agents-m365copilot-core` and `agents-m365copilot-beta` via Lerna. The `agents-m365copilot` (v1.0) package is excluded from the Lerna `@microsoft/agents-m365copilot-*` scope — build it separately with `npm run build` inside `typescript/packages/agents-m365copilot/`.
 - `npm run test` runs Vitest tests (only `agents-m365copilot-core` has tests).
-- `npm run lint` requires an `eslint.config.*` at the TypeScript root, which does not exist. Lint the core package directly: `npx eslint --config packages/agents-m365copilot-core/eslint.config.mjs --quiet "packages/agents-m365copilot-core/src/**/*.ts"` from the `typescript/` directory.
+- `npm run lint` requires an `eslint.config.*` at the TypeScript root, which does not exist. Lint the core package directly from the `typescript/` directory:
+  ```bash
+  npx eslint --config packages/agents-m365copilot-core/eslint.config.mjs --quiet "packages/agents-m365copilot-core/src/**/*.ts"
 
 ### .NET (`dotnet/`)
 
