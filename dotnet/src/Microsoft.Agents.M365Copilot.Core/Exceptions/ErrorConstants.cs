@@ -31,7 +31,7 @@ namespace Microsoft.Agents.M365Copilot.Core.Exceptions
 
             internal const string BatchRequestError = "Error occurred when making the batch request. See inner exception for more details.";
 
-            internal const string InvalidProxyArgument = "Proxy cannot be set more once. Proxy can only be set on the proxy or defaultHttpHandler argument and not both.";
+            internal const string InvalidProxyArgument = "Proxy cannot be set more than once. Proxy can only be set on the proxy or defaultHttpHandler argument and not both.";
         }
     }
 }
