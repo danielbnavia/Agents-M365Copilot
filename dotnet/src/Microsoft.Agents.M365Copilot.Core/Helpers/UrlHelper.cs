@@ -37,9 +37,17 @@ namespace Microsoft.Agents.M365Copilot.Core.Helpers
             {
                 if (string.IsNullOrEmpty(param)) continue;
 
-                string[] kvp = param.Split('=');
-                queryValues.Add(kvp[0], WebUtility.UrlDecode(kvp[1]));
-
+                int eqIndex = param.IndexOf('=');
+                if (eqIndex < 0)
+                {
+                    queryValues.Add(param, string.Empty);
+                }
+                else
+                {
+                    string key = param.Substring(0, eqIndex);
+                    string value = param.Substring(eqIndex + 1);
+                    queryValues.Add(key, WebUtility.UrlDecode(value));
+                }
             }
 
             return queryValues;
