@@ -27,10 +27,13 @@ This is a multi-language SDK monorepo (TypeScript, Python, C#/.NET) for Microsof
 
 ### Python (`python/packages/`)
 
-Three independent Poetry-managed packages. Each must be installed and tested separately:
-- `microsoft_agents_m365copilot_core` — has 22 unit tests (`poetry run pytest .`)
-- `microsoft_agents_m365copilot` — Kiota-generated, no tests (pytest exit code 5 is expected)
-- `microsoft_agents_m365copilot_beta` — Kiota-generated, no tests (pytest exit code 5 is expected)
+Three independent Poetry-managed packages. For each package directory under `python/packages/` (e.g., `microsoft_agents_m365copilot_core`), navigate into it and run the following commands:
 
-Install pattern for each: `cd python/packages/<pkg> && poetry install`.
-Build: `poetry build`. Lint: `poetry run isort --check-only .`.
+- **Install dependencies:** `poetry install`
+- **Build package:** `poetry build`
+- **Lint:** `poetry run isort --check-only .`
+- **Test:** `poetry run pytest .`
+
+**Note on Test Results:**
+- `microsoft_agents_m365copilot_core`: Has 22 unit tests that should pass.
+- `microsoft_agents_m365copilot` & `microsoft_agents_m365copilot_beta`: These are Kiota-generated and have no tests. A `pytest` exit code of 5 is expected.
