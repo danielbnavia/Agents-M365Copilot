@@ -182,7 +182,7 @@ function App() {
                   <span>{segment.usage}%</span>
                 </div>
                 <div className="usage-row__bar">
-                  <span style={{ width: `${segment.usage}%` }} />
+                  <span style={{ '--usage-percent': `${segment.usage}%` } as React.CSSProperties} />
                 </div>
               </div>
             ))}
