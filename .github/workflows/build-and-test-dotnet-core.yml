@@ -58,7 +58,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: test-results-${{ matrix.dotnet-version }}
+          name: test-results-dotnet-core
           path: dotnet/tests/Microsoft.Agents.M365Copilot.Core.Tests/TestResults/
           retention-days: 7
   
