@@ -27,7 +27,7 @@ class FeatureUsageFlag(int, Enum):
     LOGGING_HANDLER_ENABLED = 16
 
     def __str__(self):
-        return self.value
+        return str(self.value)
 
 
 class NationalClouds(str, Enum):
