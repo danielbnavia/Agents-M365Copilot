@@ -57,10 +57,9 @@ class Identity(AdditionalDataHolder, Parsable):
 
             return AzureCommunicationServicesUserIdentity()
         if mapping_value and mapping_value.casefold() == "#microsoft.graph.callRecords.userIdentity".casefold():
-            from .call_records.user_identity import UserIdentity
-            from .user_identity import UserIdentity
+            from .call_records.user_identity import UserIdentity as CallRecordsUserIdentity
 
-            return UserIdentity()
+            return CallRecordsUserIdentity()
         if mapping_value and mapping_value.casefold() == "#microsoft.graph.communicationsApplicationIdentity".casefold():
             from .communications_application_identity import CommunicationsApplicationIdentity
 
@@ -130,10 +129,9 @@ class Identity(AdditionalDataHolder, Parsable):
 
             return TeamworkUserIdentity()
         if mapping_value and mapping_value.casefold() == "#microsoft.graph.userIdentity".casefold():
-            from .call_records.user_identity import UserIdentity
-            from .user_identity import UserIdentity
+            from .user_identity import UserIdentity as DefaultUserIdentity
 
-            return UserIdentity()
+            return DefaultUserIdentity()
         return Identity()
     
     def get_field_deserializers(self,) -> dict[str, Callable[[ParseNode], None]]:
