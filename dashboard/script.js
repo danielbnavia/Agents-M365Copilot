@@ -69,9 +69,9 @@ function currentSlice() {
 
 function renderKpis(data) {
   const totalSessions = sum(data.map((d) => d.sessions));
-  const avgConversion = sum(data.map((d) => d.conversion)) / data.length;
+  const avgConversion = data.length ? sum(data.map((d) => d.conversion)) / data.length : 0;
   const totalRevenue = sum(data.map((d) => d.revenue));
-  const avgOrderValue = totalRevenue / totalSessions;
+  const avgOrderValue = totalSessions ? totalRevenue / totalSessions : 0;
 
   const cards = [
     { label: "Sessions", value: totalSessions.toLocaleString(), delta: "+8.4%" },
