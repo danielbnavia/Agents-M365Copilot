@@ -102,7 +102,7 @@ class MicrosoftAgentsM365CopilotTelemetryHandler(BaseMiddleware):
                 f'{core_library_name} (featureUsage={request.context.feature_usage})'
         else:
             telemetry_header_string = f'{core_library_name} '\
-                '(featureUsage={request.context.feature_usage})'
+                f'(featureUsage={request.context.feature_usage})'
 
         if 'sdkVersion' in request.headers:
             sdk_version = request.headers.get('sdkVersion')

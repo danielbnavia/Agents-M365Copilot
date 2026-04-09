@@ -23,8 +23,13 @@ namespace Microsoft.Agents.M365Copilot.Core.Extensions
             {
                 // Add incoming flag to existing feature flag values.
                 foreach (string flag in flags)
-                    if (Enum.TryParse(Convert.ToInt32(flag, 16).ToString(), out FeatureFlag targetFeatureFlag))
+                {
+                    if (int.TryParse(flag, System.Globalization.NumberStyles.HexNumber, null, out int parsed)
+                        && Enum.TryParse(parsed.ToString(), out FeatureFlag targetFeatureFlag))
+                    {
                         featureFlag |= targetFeatureFlag;
+                    }
+                }
 
                 // Remove current header value.
                 httpClient.DefaultRequestHeaders.Remove(CoreConstants.Headers.FeatureFlag);
@@ -44,8 +49,12 @@ namespace Microsoft.Agents.M365Copilot.Core.Extensions
             if (httpClient.DefaultRequestHeaders.TryGetValues(CoreConstants.Headers.FeatureFlag, out var flags))
             {
                 string flag = flags.FirstOrDefault();
-                if (Enum.TryParse(Convert.ToInt32(flag, 16).ToString(), out FeatureFlag targetFeatureFlag))
+                if (flag != null
+                    && int.TryParse(flag, System.Globalization.NumberStyles.HexNumber, null, out int parsed)
+                    && Enum.TryParse(parsed.ToString(), out FeatureFlag targetFeatureFlag))
+                {
                     return targetFeatureFlag.HasFlag(featureFlag);
+                }
             }
             return false;
         }
